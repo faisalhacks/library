@@ -1,0 +1,11 @@
+# Tells Netlify how to build this Next.js app.
+# The Supabase URL and key are NOT here: add them in Netlify under
+# Project configuration -> Environment variables.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  # Next.js 16 needs Node 20.9 or newer.
+  NODE_VERSION = "22"
