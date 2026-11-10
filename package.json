@@ -19,6 +19,7 @@
     "react-force-graph-2d": "1.29.2"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.16.6",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
