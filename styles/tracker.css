@@ -1,0 +1,136 @@
+.tracker-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.tracker-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+.tracker-live.on {
+  color: var(--accent);
+}
+
+.tracker-live.on .tracker-dot {
+  background: var(--accent);
+}
+
+.tracker-add {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tracker-add-title {
+  flex: 1 1 14rem;
+  min-width: 0;
+}
+
+.tracker-group {
+  margin-bottom: 1.5rem;
+}
+
+.tracker-group-title {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.tracker-none {
+  margin: 0;
+}
+
+.tracker-list {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tracker-skeleton {
+  height: 3.25rem;
+}
+
+.tracker-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.tracker-title {
+  flex: 1 1 12rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.tracker-row.done .tracker-title {
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.tracker-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tracker-status,
+.tracker-meta select,
+.tracker-row input[type="date"] {
+  max-width: 100%;
+  min-height: 2rem;
+  padding-block: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.tracker-due {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.tracker-due.overdue,
+.tracker-due.overdue span {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.tracker-due.overdue input[type="date"] {
+  border-color: var(--danger);
+}
+
+@media (max-width: 768px) {
+  .tracker-status {
+    order: 0;
+  }
+
+  .tracker-row > .menu-button {
+    order: 1;
+    margin-left: auto;
+  }
+
+  .tracker-title {
+    order: 2;
+    flex-basis: 100%;
+  }
+
+  .tracker-meta {
+    order: 3;
+    flex-basis: 100%;
+  }
+}

@@ -1,0 +1,79 @@
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.5rem;
+}
+
+.home-tasks {
+  grid-column: 1 / -1;
+}
+
+.home-all {
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.home-all:hover {
+  text-decoration: underline;
+}
+
+.home-text {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  gap: 0.1rem;
+}
+
+.home-text .row-meta {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.home-folder {
+  font-size: inherit;
+}
+
+.home-task {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  min-height: 3rem;
+  padding: 0.55rem 0.85rem;
+}
+
+.home-task .row-name {
+  flex: 1 1 10rem;
+}
+
+.home-check {
+  flex: none;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.home-overdue {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.home-skeletons {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.home-skeleton {
+  height: 3rem;
+}
+
+@media (max-width: 900px) {
+  .home-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
