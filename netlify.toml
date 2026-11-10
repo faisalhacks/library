@@ -9,3 +9,10 @@
 [build.environment]
   # Next.js 16 needs Node 20.9 or newer.
   NODE_VERSION = "22"
+
+# Netlify's Next.js adapter. It turns the .next build into server functions
+# (pages, API routes, the login redirect). Without it Netlify only uploads
+# static files and every page returns 404. The version is pinned in
+# package.json (devDependencies).
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
